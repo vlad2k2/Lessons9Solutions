@@ -50,7 +50,7 @@ public class Lessons9Solutions {
         // та добуток всіх елементів в непарних стовпцях (стовпцях 1, 3).
         for (int i = 0; i < intMatrix.length; i++) {
             for (int j = 0; j < intMatrix[i].length; j++) {
-                if (i % 2 == 0) {
+                if (j % 2 == 0) {
                     multiEvenLines *= intMatrix[i][j];
                 } else {
                     multiOddRows *= intMatrix[i][j];
