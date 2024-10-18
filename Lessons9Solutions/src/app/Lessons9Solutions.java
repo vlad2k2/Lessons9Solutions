@@ -17,7 +17,7 @@ public class Lessons9Solutions {
 
         int[][] intMatrix = new int[4][4];
 
-
+        // Заплвнення матриці
         for (int i = 0; i < intMatrix.length; i++){
             for(int j = 0; j < intMatrix[i].length; j++){
                 intMatrix[i][j] = rnd.nextInt(1, 51);
@@ -40,16 +40,6 @@ public class Lessons9Solutions {
                 } else {
                     sumOddRows += intMatrix[i][j];
                 }
-            }
-        }
-        System.out.println();
-        System.out.println("Сума елементів у парних рядках (рядок 0, 2): " + sumEvenLines);
-        System.out.println("Сума елементів у непарних рядках (рядок 1, 3): " + sumOddRows);
-
-        // Знайдіть добуток всіх елементів в парних стовпцях (стовпцях 0, 2)
-        // та добуток всіх елементів в непарних стовпцях (стовпцях 1, 3).
-        for (int i = 0; i < intMatrix.length; i++) {
-            for (int j = 0; j < intMatrix[i].length; j++) {
                 if (j % 2 == 0) {
                     multiEvenLines *= intMatrix[i][j];
                 } else {
@@ -57,8 +47,25 @@ public class Lessons9Solutions {
                 }
             }
         }
+        System.out.println();
+        System.out.println("Сума елементів у парних рядках (рядок 0, 2): " + sumEvenLines);
+        System.out.println("Сума елементів у непарних рядках (рядок 1, 3): " + sumOddRows);
         System.out.println("Добуток елементів у парних стовпцях (стовпець 0, 2): " + multiEvenLines);
         System.out.println("Добуток елементів у непарних стовпцях (стовпець 1, 3): " + multiOddRows);
+
+        // Знайдіть добуток всіх елементів в парних стовпцях (стовпцях 0, 2)
+        // та добуток всіх елементів в непарних стовпцях (стовпцях 1, 3).
+//        for (int i = 0; i < intMatrix.length; i++) {
+//            for (int j = 0; j < intMatrix[i].length; j++) {
+//                if (j % 2 == 0) {
+//                    multiEvenLines *= intMatrix[i][j];
+//                } else {
+//                    multiOddRows *= intMatrix[i][j];
+//                }
+//            }
+//        }
+//        System.out.println("Добуток елементів у парних стовпцях (стовпець 0, 2): " + multiEvenLines);
+//        System.out.println("Добуток елементів у непарних стовпцях (стовпець 1, 3): " + multiOddRows);
 
         // Перевірте, чи матриця є магічним квадратом. Магічний квадрат - це квадратна матриця,
         // в якій суми всіх рядків, стовпців та діагоналей рівні між собою
